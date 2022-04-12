@@ -1,0 +1,92 @@
+<ion-content>
+  <ion-toolbar>
+    <ion-icon slot="start" name="arrow-back" routerLink="/options"></ion-icon>
+    <ion-title>Add Menu</ion-title>
+  </ion-toolbar>
+
+  <div class="container">
+    <form [formGroup]="form">
+      <div class="input-form">
+        <ion-label>Nama Menu</ion-label>
+        <ion-input type="text" placeholder="Full Name" formControlName="namaNemu"></ion-input>
+      </div>
+      <div class="input-form">
+        <ion-label>Kategori</ion-label>
+        <ion-select placeholder="Pilih Kategori" formControlName="idKategori">
+          <ion-select-option value="1">Makanan</ion-select-option>
+          <ion-select-option value="2">Minuman</ion-select-option>
+        </ion-select>
+      </div>
+      <div class="input-form">
+        <ion-label>Harga Satuan</ion-label>
+        <input class="currency" formControlName="hargaSatuan" currencyMask [options]="{ prefix: 'Rp ', thousands: '.', decimal: ',',align: 'left' }" type="text" placeholder="Harga Satuan">
+      </div>
+      <div class="input-form">
+        <ion-label>Stok</ion-label>
+        <ion-input type="number" placeholder="Stok" formControlName="vol"></ion-input>
+      </div>
+      <div class="input-form">
+        <ion-label>Deskripsi</ion-label>
+        <ion-textarea rows="6" cols="20" placeholder="Deskripsi Makanan" formControlName="deskripsi"></ion-textarea>
+      </div>
+      <div class="input-form upload">
+        <ion-label>Upload Gambar</ion-label>
+        <label id="label-file">Select File</label>
+        <ion-input (change)="selectFile($event)" type="file" accept="image/*" id="label-file" class="fileInput"></ion-input>
+      </div>
+      <ion-button expand="block" (click)="save()"> Simpan </ion-button>
+    </form>
+  </div>
+</ion-content>
+
+<!-- <ion-content>
+
+  <div class="wrapper">
+    <ion-card class="form-wrapper">
+      <!-- <form [formGroup]="form"> 
+        <ion-card-content>
+          <form [formGroup]="form">
+            <ion-item>
+              <ion-icon name="cafe-outline"></ion-icon>
+              <ion-input type="text" placeholder="Nama Menu" formControlName="namaNemu"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="paper-plane-outline"></ion-icon>
+              <ion-select placeholder="Kategori Makanan" formControlName="idKategori">
+                <ion-select-option value="1">Makanan</ion-select-option>
+                <ion-select-option value="2">Minuman</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <label for="">
+              Harga Satuan
+            </label>
+            <ion-item>
+              <ion-icon name="cash-outline"></ion-icon>
+              <input class="currency" formControlName="hargaSatuan" currencyMask [options]="{ prefix: 'Rp ', thousands: '.', decimal: ',',align: 'left' }" type="text" placeholder="Harga Satuan">
+            </ion-item>
+            <ion-item>
+              <ion-icon name="bar-chart-outline"></ion-icon>
+              <ion-input type="number" placeholder="Stok" formControlName="vol"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-textarea placeholder="Deskripsi" formControlName="deskripsi"></ion-textarea>
+            </ion-item>
+            <label for="">
+              Gambar Menu
+            </label>
+            <ion-item>
+              <label for="" id="label-file" style="color: grey;">Select File</label>
+              <ion-input (change)="selectFile($event)" style="opacity: 0; position: absolute;" type="file" accept="image/*" id="label-file"></ion-input>
+            </ion-item>
+            <ion-button expand="block" (click)="save()"  >Submit</ion-button>
+          </form>
+        </ion-card-content>
+      <!-- </form> 
+    </ion-card>
+
+    <div class="line-text">
+      <span class="lines"></span>
+      <span class="text">Kafe Kafean</span>
+    </div>
+  </div>
+</ion-content> -->

@@ -1,0 +1,14 @@
+<ion-header>
+  <img src="../../../assets/images/top.png" alt="topbar" class="img-top">
+  <img src="../../../assets/images/logo.png" alt="logo" class="align-center">
+</ion-header>
+
+<ion-content>
+  <img src="../../../assets/images/shape1.png" alt="shape1" class="shape">
+  <h1 class="title">Log In</h1>
+  <form [formGroup]="form">
+    <ion-input type="text" placeholder="Username" formControlName="username"></ion-input>
+    <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+    <ion-button class="btn-login" expand="block" (click)="login()">Sign In</ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-content>
+  <div id="header">
+  </div>
+
+  <div class="wrapper">
+    <h1>Form Pembayaran</h1>
+    <ion-card class="form-wrapper">
+      <form [formGroup]="form">
+        <ion-card-content>
+          <label for="">
+            Uang Masuk
+          </label>
+          <ion-item>
+            <ion-icon name="cash-outline"></ion-icon>
+            <input type="text" class="currency" placeholder="Uang Masuk" formControlName="vMasuk" currencyMask [options]="{ prefix: 'Rp ', thousands: '.', decimal: ',',align: 'left' }">
+          </ion-item>
+          <label for=""  *ngIf="kembali == true" >
+            Uang Kembali
+          </label>
+          <ion-item *ngIf="kembali == true" >
+            <ion-icon name="cash-outline"></ion-icon>
+            <input type="text" class="currency" readonly placeholder="Uang Keluar" formControlName="vKeluar" currencyMask [options]="{ prefix: 'Rp ', thousands: '.', decimal: ',',align: 'left' }">
+          </ion-item>
+          <ion-button expand="block" (click)="process()" *ngIf="kembali == false">Process</ion-button>
+          <ion-button expand="block" (click)="save ()" *ngIf="kembali == true" >Confirm</ion-button>
+        </ion-card-content>
+      </form>
+    </ion-card>
+  </div>
+</ion-content>
+

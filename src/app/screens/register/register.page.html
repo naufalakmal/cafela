@@ -1,0 +1,30 @@
+<ion-content>
+  <ion-toolbar>
+    <ion-icon slot="start" name="arrow-back" routerLink="/options"></ion-icon>
+    <ion-title>Add Users</ion-title>
+  </ion-toolbar>
+
+  <div class="container">
+    <form [formGroup]="form">
+      <div class="input-form">
+        <ion-label>Name</ion-label>
+        <ion-input type="text" placeholder="Full Name" formControlName="fullName"></ion-input>
+      </div>
+      <div class="input-form">
+        <ion-label>Username</ion-label>
+        <ion-input type="text" placeholder="Username" formControlName="username"></ion-input>
+      </div>
+      <div class="input-form">
+        <ion-label>Password</ion-label>
+        <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+      </div>
+      <div class="input-form">
+        <ion-label>Role</ion-label>
+        <ion-select placeholder="Pilih Role" formControlName="idRole">
+          <ion-select-option *ngFor="let data of listRole" [value]="data.id">{{data.keterangan}}</ion-select-option>
+        </ion-select>
+      </div>
+      <ion-button expand="block" (click)="save()" > Sign Up </ion-button>
+    </form>
+  </div>
+</ion-content>

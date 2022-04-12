@@ -1,0 +1,30 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button color="dark"  routerLink="/options">
+      <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Menu</ion-title>
+</ion-toolbar>
+
+<ion-content>
+  <!-- HEADER -->
+
+  <!-- SEARCHBAR -->
+  <app-searchbar></app-searchbar>
+
+  <!-- CATEGORY -->
+  <!-- <div class="categories">
+    <app-category-item *ngFor="let item of categories" [item]="item"></app-category-item>
+  </div> -->
+
+  <!-- PRODUCTS -->
+  <div class="food-list">
+    <app-foot-edit-card *ngFor="let food of menu" [item]="food" (clicked)="goToDetailPage(food.id)"></app-foot-edit-card>
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/new-menu">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

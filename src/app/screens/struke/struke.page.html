@@ -1,0 +1,77 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>{{data.idTransaksi}}</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content *ngIf="struke == true" >
+  <div class="content" id="print-page">
+    <h1 class="title">
+      Cafela
+    </h1>
+    <h4 class="subtitle">
+      Jln. Kliningan no 6
+    </h4>
+    <hr>
+    <div class="form-custom">
+      <div>
+        Date :
+      </div>
+      <div>{{data.dateToString}}</div>
+    </div>
+    <div class="form-custom">
+      <div>
+        Transaction :
+      </div>
+      <div>{{data.idTransaksi}}</div>
+    </div>
+    <div class="form-custom">
+      <div>
+        Waiters :
+      </div>
+      <div>{{data.namaPegawai}}</div>
+    </div>
+    <hr>
+    <div class="menu" *ngFor="let items of data.daftarMenu" >
+      <div>
+        {{items.namaMenu}} &nbsp;&nbsp;&nbsp; {{items.volume}}X
+      </div>
+      <div>
+        {{items.hargaSatuan*items.volume|number:'1.2'}}
+      </div>
+    </div>
+    <hr>
+    <div class="form-custom">
+      <div>
+        Total :
+      </div>
+      <div>{{data.uangJumlah|number:'1.2'}}</div>
+    </div>
+    <hr>
+    <div class="form-custom">
+      <div>
+        Cash :
+      </div>
+      <div>{{data.uangMasuk|number:'1.2'}}</div>
+    </div>
+    <div class="form-custom">
+      <div>
+        Charge :
+      </div>
+      <div>{{data.uangKeluar|number:'1.2'}}</div>
+    </div>
+    <br>
+    <br>
+  </div>
+  <div class="form-custom-button">
+      <button printSectionId="print-page" styleSheetFile="assets/print.css" ngxPrint style="height: 50px; width: 100px; color: white; background-color: rgb(255, 84, 114); border-radius: 5px;" color="light">
+        Print
+      </button>
+    &nbsp;&nbsp;&nbsp;
+    <ion-buttons>
+      <ion-button routerLink="/options"  style="height: 50px; width: 100px; background-color: rgb(68, 191, 117); border-radius: 5px;" color="light">
+        Finish
+      </ion-button>
+    </ion-buttons>
+  </div>
+</ion-content>

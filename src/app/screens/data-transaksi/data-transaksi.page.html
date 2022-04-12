@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <div class="header">
+      <ion-buttons>
+        <ion-button routerLink="/options">
+          <ion-icon slot="icon-only" color='light' name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title color="light">Data Transaksi</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Filters</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <div class = "list">
+      <select class="pegawai" name="" id="">
+        <option value="" selected>Pilih Nama Pegawai</option>
+      </select>
+
+      <ion-item class="datepicker">
+        <ion-label>Pilih Tanggal</ion-label>
+        <ion-datetime
+          displayFormat="DD.MM.YYYY"
+          presentation="date"
+          [(ngModel)]="date"
+        ></ion-datetime>
+      </ion-item>
+
+   </div>
+   <div class="list-button">
+    <ion-buttons>
+      <ion-button class="search" color="light">
+        search
+      </ion-button>
+    </ion-buttons>
+    &nbsp;&nbsp;&nbsp;
+    <ion-buttons>
+      <ion-button class="reset" color="light">
+        reset
+      </ion-button>
+    </ion-buttons>
+   </div>
+  </ion-card-content>
+</ion-card>
+
+<ion-content>
+  <div class="ion-padding">
+    <!-- Theme classes dark, material, bootstrap -->
+    <ngx-datatable
+      class="material"
+      [limit]="10"
+      [rows]="rows"
+      [rowHeight]="50"
+      [columns]="columns"
+      [columnMode]="'force'"
+      [sortType]="'multi'"
+      [headerHeight]="50"
+      [footerHeight]="50">
+      <ngx-datatable-column name="No.Transaksi" prop="idTransaksi" [width]="25">
+        <ng-template let-value="value" let-expanded="expanded" ngx-datatable-cell-template style="font-size: 10px;">
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Kasir" prop="namaPegawai" [width]="45">
+        <ng-template let-value="value" ngx-datatable-cell-template style="font-size: 10px;">
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Nominal" prop="uangJumlah" [width]="50">
+        <ng-template let-value="value" ngx-datatable-cell-template style="font-size: 10px;">
+          {{ value|number:'1.2' }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Tanggal" prop="dateToString" [width]="50">
+        <ng-template let-value="value" ngx-datatable-cell-template style="font-size: 10px;">
+          {{ value }}
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+</ion-content>

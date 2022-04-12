@@ -1,0 +1,55 @@
+ion-header {
+  position: initial;
+}
+
+.img-top {
+  width: 100%;
+  position: absolute;
+}
+
+.align-center {
+  display: block;
+  position: relative;
+  width: 130px;
+  z-index: 2;
+  margin: 150px auto 20px auto;
+}
+
+.title {
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: 800;
+  color: #FF5472;
+}
+
+.shape {
+  position: absolute;
+  right: 0;
+  z-index: -999;
+}
+
+ion-input {
+  width: 90%;
+  height: 50px;
+  background-color: #fff;
+  margin-top: 20px !important;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  text-indent: 10px;
+  margin-left: 20px;
+  color: #000;
+  border: 2px solid #B4B4B4;
+}
+
+.btn-login {
+  display: block;
+  height: 47px;
+  width: 90%;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 20px !important;
+  margin: auto;
+}

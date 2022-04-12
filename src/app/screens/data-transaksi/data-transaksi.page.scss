@@ -1,0 +1,53 @@
+@import '~@swimlane/ngx-datatable/index.css';
+@import '~@swimlane/ngx-datatable/themes/material.scss';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
+
+ion-toolbar {
+  display: flex;
+}
+
+.header {
+  display: flex;
+}
+
+ion-header {
+  --background: #FF5472;
+}
+
+.new-background-color {
+  --background: #FF5472;
+  height: 65px;
+  padding-top: 5px;
+}
+
+.pegawai {
+  padding: 2px;
+  border-radius: 5px;
+  border-color: rgb(167, 167, 167);
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search {
+  background-color: rgb(18, 232, 53);
+  border-radius: 5px;
+}
+
+.reset {
+  background-color: red;
+  border-radius: 5px;
+}
+
+.list-button {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.datepicker {
+  padding: none;
+}

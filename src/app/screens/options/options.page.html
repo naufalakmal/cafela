@@ -1,0 +1,22 @@
+<ion-content>
+  <ion-toolbar>
+    <ion-title *ngIf="role == 3">Kasir</ion-title>
+    <ion-title *ngIf="role == 5">Admin</ion-title>
+    <ion-title *ngIf="role == 4">Manajer</ion-title>
+  </ion-toolbar>
+  <img src="../../../assets/images/shape1.png" alt="shape1" class="shape">
+  <form id="form">
+    <!-- <app-input placeholder="Your Name"></app-input>
+    <app-input placeholder="Email"></app-input>
+    <app-input type="password" placeholder="Password"></app-input> -->
+    <ion-button expand="block" fill="outline" shape="round" routerLink="/home" *ngIf="role == 3" >Pesan</ion-button>
+    <!-- <ion-button expand="block" fill="outline" shape="round">Terima Pesanan</ion-button> -->
+    <ion-button expand="block" fill="outline" shape="round" routerLink="/menu" *ngIf="role == 4">Daftar Menu</ion-button>
+    <ion-button expand="block" fill="outline" shape="round" routerLink="/data-transaksi" *ngIf="role == 4">Data Transaksi</ion-button>
+    <ion-button expand="block" fill="outline" shape="round" routerLink="/laporan" *ngIf="role == 4 || role == 5">Laporan Keuangan</ion-button>
+    <ion-button expand="block" fill="outline" shape="round" routerLink="/akun-baru"*ngIf="role == 5">User Baru</ion-button>
+  </form>
+  <div class="container">
+    <ion-button class="btn-logout" fill="solid" shape="round" (click)="openmodal()">Log Out</ion-button>
+  </div>
+</ion-content>
