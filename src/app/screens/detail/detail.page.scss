@@ -1,5 +1,5 @@
 ion-content {
-  --background: #FF5472;
+  --background: #FF5472 !important;
   position: relative;
 
   .header {
@@ -83,5 +83,12 @@ ion-content {
       width: 84%;
       bottom: 0;
     }
+  }
+
+  .edit,.delete {
+    width: 40% !important;
+  }
+  .delete {
+    right:2rem;
   }
 }

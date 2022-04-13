@@ -2,6 +2,10 @@ ion-header {
   position: initial;
 }
 
+ion-content {
+  --background: white !important;
+}
+
 .img-top {
   width: 100%;
   position: absolute;

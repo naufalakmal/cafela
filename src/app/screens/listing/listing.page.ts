@@ -26,31 +26,7 @@ export class ListingPage implements OnInit, ViewWillEnter {
   }
 
   ngOnInit() {
-    this.getCategories();
     this.foods = this.foodService.getFoods();
-  }
-
-  getCategories() {
-    this.categories = [
-      {
-        id: 1,
-        label: 'All',
-        image: 'assets/images/icons/all.png',
-        active: true,
-      },
-      {
-        id: 3,
-        label: 'Makanan',
-        image: 'assets/images/icons/dish.png',
-        active: false,
-      },
-      {
-        id: 4,
-        label: 'Minuman',
-        image: 'assets/images/icons/icons8-beer-glass-50.png',
-        active: false,
-      },
-    ];
   }
 
   goToDetailPage(id: number) {

@@ -33,6 +33,8 @@
       <p>{{food.deskripsi}}</p>
     </div>
 
-    <app-button (click)="addItemToCart()">Add to Cart</app-button>
+    <app-button (click)="addItemToCart()" *ngIf="role == 3">Add to Cart</app-button>
+    <app-button *ngIf="role == 4" class="edit">Edit</app-button>
+    <app-button *ngIf="role == 4" class="delete">Delete</app-button>
   </div>
 </ion-content>

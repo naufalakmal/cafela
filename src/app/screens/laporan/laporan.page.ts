@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Laporan } from './../../models/laporan';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-laporan',

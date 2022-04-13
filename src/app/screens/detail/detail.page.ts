@@ -48,11 +48,8 @@ export class DetailPage implements OnInit, ViewWillEnter {
   }
 
   ngOnInit() {
-    // this.food = this.foodService.getFood(this.id);
-    // this.service.findMenuById(this.id).subscribe(data=>{
-    //   this.food = data.body;
-    // });
   }
+  
 
   addItemToCart() {
     const cartitem: CartItem = {
