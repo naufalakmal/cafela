@@ -52,6 +52,10 @@ const routes: Routes = [
   {
     path: 'struke',
     loadChildren: () => import('./screens/struke/struke.module').then( m => m.StrukePageModule)
+  },
+  {
+    path: 'list-user',
+    loadChildren: () => import('./screens/list-user/list-user.module').then( m => m.ListUserPageModule)
   }
 ];
 

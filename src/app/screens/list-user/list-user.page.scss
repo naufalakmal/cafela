@@ -1,0 +1,22 @@
+ion-toolbar{
+    display: flex;
+  }
+  
+  .header {
+    display: flex;
+  }
+  
+  ion-header{
+    --background : #FF5472;
+  }
+  
+  .new-background-color{
+    --background: #FF5472;
+  }
+  
+  .pegawai{
+    padding: 2px;
+    border-radius: 5px;
+    border-color: rgb(167, 167, 167);
+  }
+  
